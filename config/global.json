@@ -1,0 +1,26 @@
+{
+  "Server" : {
+    "Port"           : 8084,
+    "Name"           : "customer-api",
+    "DefaultVersion" : "1.0.0",
+    "Acceptable"     : [ "application/json" ],
+    "ThrottleRate"   : 50,
+    "ThrottleBurst"  : 100
+  },
+  "ServerLogging" : {
+    "Name"        : "ServerLogging",
+    "Dir"         : "./logs/",
+    "File"        : "customer-api-server.log"
+  },
+  "ApplicationLogging" : {
+    "Name"        : "ApplicationLogging",
+    "Dir"         : "./logs/",
+    "File"        : "customer-api.log",
+    "Level"       : "debug"
+  },
+  "Data" : {
+    "ConnectionString"        : "Driver={SQL Server Native Client 11.0};Server=svpts01;Database=foundationsupportdb;UID=app_access;PWD=snapsh0t",
+    "CustomerDetailsSp"        : "customerdb.dbo.cus_api_details_get",
+    "CustomerContactsSp"        : "customerdb.dbo.cus_api_contact_details_get"
+  }
+}
